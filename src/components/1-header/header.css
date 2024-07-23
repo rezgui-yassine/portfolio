@@ -1,0 +1,83 @@
+header.flex {
+  justify-content: space-between;
+  padding: 0 2.4rem;
+  margin-top: 1.2rem;
+}
+header.flex nav {
+  background-color: var(--bgHeader);
+  padding: 0.77rem 1.6rem;
+  border-radius: 55px;
+  box-shadow: 1px 1px 40px #2323242a;
+}
+
+header ul.flex {
+  gap: 16px;
+}
+header ul li a {
+  color: var(--title);
+  opacity: 0.9;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+header ul li a:hover {
+  color: var(--blue);
+  opacity: 1;
+  font-size: 0.9rem;
+}
+
+header button {
+  font-size: 1.2rem;
+}
+
+header button .menu {
+  display: none;
+}
+
+/* model css */
+header .fixed {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: rgba(40, 40, 48, 0.91);
+  box-shadow: 0 1px 10px #2323242a;
+}
+
+
+header .fixed ul.modal{
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--secondary);
+}
+header .fixed ul.modal li {
+  border-bottom:1px solid var(--border);
+  padding-bottom: 0.77rem;
+  padding-top: 0.5rem;
+}
+header .fixed ul.modal li a {
+  font-size: 1rem;
+ 
+
+}
+
+header .fixed ul.modal li:last-child {
+border: none;
+}
+
+
+
+
+
+@media (max-width: 700px) {
+  header.flex nav {
+    display: none;
+  }
+
+  header button .menu {
+    display: none;
+  }
+}
