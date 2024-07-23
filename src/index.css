@@ -4,9 +4,20 @@ html{
 font-family: 'Roboto', sans-serif;
 }
 
+/* html {box-sizing: border-box;} 
+ 
+*, *:before, *:after {box-sizing: inherit;}   */
+*{
+  margin: 0;
+  padding: 0;
+ 
+
+}
 
 :root{
   --primary:#000;
+  --secondary :rgb(24,24,27);
+  --border : rgba(63,63,70,0.4);
 }
 
 
@@ -18,9 +29,13 @@ font-family: 'Roboto', sans-serif;
 body{
   background-color: var(--primary);
   color: #fff;
-}
+} 
 
 
 .container{
-  border: 2px solid red;
+  border: 2px solid var(--border);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color:var( --secondary)   ;
 }
