@@ -5,17 +5,16 @@ function Header() {
   const [showModal, setShowModal] = useState(false);
   return (
     <header className=" flex">
-      {/* for make the nav in the center */}
-      <div></div>
-
-      <button 
+       <button 
         onClick={() => {
           setShowModal(true);
         }}
-        className="menu icon-menu"
+        className="menu icon-menu flex"
       >
-      
       </button>
+      {/* for make the nav in the center */}
+      <div/>
+     
 
       <nav>
         <ul className="flex">
@@ -36,7 +35,7 @@ function Header() {
           </li>
         </ul>
       </nav>
-      <button >
+      <button className="mode flex" >
         <span className="icon-moon-o"></span>
       </button>
       {showModal && (

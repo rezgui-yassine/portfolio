@@ -1,3 +1,21 @@
+/* =============
+ table of contents
+===============
+ 
+1. Header Design
+2. Icons button
+3.  modal == pop up
+4. Responsive Design(media query) 
+ 
+*/
+
+
+
+
+/* ===============
+   1. Header Design
+================ */
+
 header.flex {
   justify-content: space-between;
   padding: 0 2.4rem;
@@ -30,17 +48,47 @@ header button {
   font-size: 1.2rem;
 }
 
-header button .menu {
-  display: none;
-}
 
+/* ===============
+   2. Icons button
+================ */
 
 
 /* iconButton */
-header icon-menu , header icon-moon-o {
-  background-color: aliceblue;
+header .icon-menu , header button.mode {
+  background-color: var(--bgHeader);
+  text-align: center;
+  justify-content: center;
+  height: 2.4rem;
+  width: 2.4rem;
+  border-radius: 50%;
+  color: var(--subtitle);
+  border: 1px solid rgba(244, 165, 96, 0.249);
+  transition: 0.2s;
+ 
 }
 
+header .icon-menu:hover , header button.mode:hover {
+  color: var(--title);
+  border: 1px solid rgba(244, 165, 96);
+ 
+}
+header .icon-clear{
+  font-size: 1.5rem;
+  color: var(--subtitle);
+  transition: 0.3s;
+
+}
+header .icon-clear:hover{
+  font-size: 1.7rem;
+  color: crimson;
+  rotate: 180deg;
+  
+}
+
+/* ===============
+  3.  Modal == pop up
+================ */
 
 
 /* model css */
@@ -53,6 +101,9 @@ header .fixed {
 }
 
 
+/* ===============
+   4. Responsive Design(media query) 
+================ */
 
 @keyframes mymove {
   0%   {scale: 0;}
@@ -96,14 +147,18 @@ header .fixed ul.modal li:first-child {
 
 
 
+header button.menu {
+  display: none;
+}
+
 
 @media (max-width: 700px) {
   header.flex nav {
     display: none;
   }
 
-  header button .menu {
-    display: none;
+  header button.menu {
+    display: block;
   }
 }
 
