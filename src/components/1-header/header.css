@@ -9,9 +9,6 @@
  
 */
 
-
-
-
 /* ===============
    1. Header Design
 ================ */
@@ -48,14 +45,13 @@ header button {
   font-size: 1.2rem;
 }
 
-
 /* ===============
    2. Icons button
 ================ */
 
-
 /* iconButton */
-header .icon-menu , header button.mode {
+header .icon-menu,
+header button.mode {
   background-color: var(--bgHeader);
   text-align: center;
   justify-content: center;
@@ -65,31 +61,27 @@ header .icon-menu , header button.mode {
   color: var(--subtitle);
   border: 1px solid rgba(244, 165, 96, 0.249);
   transition: 0.2s;
- 
 }
 
-header .icon-menu:hover , header button.mode:hover {
+header .icon-menu:hover,
+header button.mode:hover {
   color: var(--title);
   border: 1px solid rgba(244, 165, 96);
- 
 }
-header .icon-clear{
+header .icon-close {
   font-size: 1.5rem;
   color: var(--subtitle);
   transition: 0.3s;
-
 }
-header .icon-clear:hover{
+header .icon-close:hover {
   font-size: 1.7rem;
   color: crimson;
   rotate: 180deg;
-  
 }
 
 /* ===============
   3.  Modal == pop up
 ================ */
-
 
 /* model css */
 header .fixed {
@@ -100,22 +92,25 @@ header .fixed {
   box-shadow: 0 1px 10px #2323242a;
 }
 
-
 /* ===============
    4. Responsive Design(media query) 
 ================ */
 
 @keyframes mymove {
-  0%   {scale: 0;}
-  60%  {scale: 1.2;}
-  100%  {scale: 1;}
- 
-} 
+  0% {
+    scale: 0;
+  }
+  60% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
 
-
-header .fixed ul.modal{
+header .fixed ul.modal {
   animation: mymove 0.7s;
-  width: 85%;
+  width: 75%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
@@ -124,33 +119,29 @@ header .fixed ul.modal{
   background-color: var(--secondary);
 }
 header .fixed ul.modal li {
-  border-bottom:1px solid var(--border);
+  border-bottom: 1px solid var(--border);
   padding-bottom: 0.77rem;
   padding-top: 0.5rem;
 }
 header .fixed ul.modal li a {
   font-size: 1rem;
- 
-
 }
 
 header .fixed ul.modal li:last-child {
-border: none;
+  border: none;
 }
 
 header .fixed ul.modal li:first-child {
- text-align: right;
- border: none;
- padding-bottom: 0.rem;
- padding-top: 0.2rem;
-  }
-
-
+  text-align: right;
+  border: none;
+  padding-bottom: 0rem;
+  padding-top: 0.2rem;
+  margin-bottom: -1rem;
+}
 
 header button.menu {
   display: none;
 }
-
 
 @media (max-width: 700px) {
   header.flex nav {
@@ -161,4 +152,3 @@ header button.menu {
     display: block;
   }
 }
-
