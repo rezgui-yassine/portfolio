@@ -4,14 +4,14 @@ import "./main.css";
 function Main() {
   return (
     <main className="flex">
-      <section className="left-section flex border">
+      <section className="left-section flex ">
         <button className="active">All Projects</button>
         <button>Html & Css</button>
         <button>React & Mui</button>
         <button>Angular & SpringBoot</button>
         <button>Node Js & Express</button>
       </section>
-      <section className="right-section border flex ">
+      <section className="right-section  flex ">
         {[...Array(5)].map((item) => (
           <article key={item} className="card ">
             <img width={266} src="LandingPage.png" alt="LandingPage" />
