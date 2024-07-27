@@ -12,17 +12,16 @@ function Contact() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor officiis
       </p>
       <div className="flex">
-        <form className="border">
-          
-          <div>
-            <label htmlFor="email">Email Address</label>
-            <input type="email" id="email" name="" />
+        <form className="">
+          <div className="flex">
+            <label htmlFor="email">Email Address :</label>
+            <input required type="email" id="email" name="" />
           </div>
-          <div className="flex" style={{marginTop:"24px"}}>
-            <label htmlFor="message">Message</label>
-            <textarea name="message" id="message"></textarea>
+          <div className="flex" style={{ marginTop: "24px" }}>
+            <label htmlFor="message">Your Message :</label>
+            <textarea required  name="" id="message"></textarea>
           </div>
-          <button>Submit</button>
+          <button className="submit">Submit</button>
         </form>
         <div className="animation border"></div>
       </div>
