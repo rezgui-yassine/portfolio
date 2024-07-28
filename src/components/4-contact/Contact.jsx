@@ -9,7 +9,7 @@ function Contact() {
         Contact us
       </h1>
       <p className="sub-title">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor officiis
+        Contact us for more information and Get notified when i publish something new.
       </p>
       <div className="flex">
         <form className="">
@@ -23,7 +23,7 @@ function Contact() {
           </div>
           <button className="submit">Submit</button>
         </form>
-        <div className="animation border">animation</div>
+        <div className="animation border">Animation</div>
       </div>
     </section>
   );
