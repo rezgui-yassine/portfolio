@@ -1,15 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import "./main.css";
 
 function Main() {
+
+  const  [currentactive, setcurrentactive] = useState("all");
+
   return (
     <main className="flex">
       <section className="left-section flex ">
-        <button className="active">All Projects</button>
-        <button>Html & Css</button>
-        <button>React & Mui</button>
-        <button>Angular & SpringBoot</button>
-        <button>Node Js & Express</button>
+        <button
+          onClick={() => {
+            setcurrentactive("all");
+          }}
+          className={currentactive === "all" ? "active" : null}
+        >
+          All Projects
+        </button>
+        <button
+          onClick={() => {
+            setcurrentactive("html");
+          }}
+          className={currentactive ==="html" ? "active" : null}
+        >
+          Html & Css
+        </button>
+        <button
+          
+          onClick={() => {
+            setcurrentactive("react");
+          }}
+        className={currentactive==="react" ? "active" : null}>React & Mui</button>
+        <button 
+        onClick={() => {
+          setcurrentactive("angular");
+        }}
+        className={currentactive==="angular" ? "active" : null}>
+          Angular & SpringBoot
+        </button >
+        <button onClick={()=>{
+          setcurrentactive("node");
+        }} className={currentactive==="node" ? "active" : null}>Node Js & Express</button>
       </section>
       <section className="right-section  flex ">
         {[...Array(5)].map((item) => (
