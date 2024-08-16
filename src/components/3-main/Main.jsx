@@ -4,12 +4,15 @@ import "./main.css";
 const myprojects = [
   {
     projectTitle: "react project",
+    description:"",
     category: ["react", "bootstrap"],
     imaPath: "./images/2.jpg",
   },
-  { projectTitle: "angular project", category: ["angular"], imaPath: "./images/1.jpg" },
-  { projectTitle: "node project", category: ["node"], imaPath: "./images/3.jpg"},
-  { projectTitle: "html project", category: ["html", "css"], imaPath:"./images/4.jpg" },
+  { projectTitle: "angular project",description:"", category: ["angular"], imaPath: "./images/1.jpg" },
+  { projectTitle: "Sign Up Form",description:"", category: ["angular"], imaPath: "./images/1.jpg" },
+  { projectTitle: "node project", description:"", category: ["node"], imaPath: "./images/3.jpg"},
+  { projectTitle: "html css project", description:"", category: ["html", "css"], imaPath:"./images/4.jpg" },
+  { projectTitle: "SpringBoot", description:"", category: ["html", "css"], imaPath:"./images/4.jpg" },
 ];
 
 function Main() {
