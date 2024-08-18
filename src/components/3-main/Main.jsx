@@ -1,19 +1,8 @@
 import React, { useState } from "react";
 import "./main.css";
+import { myprojects } from "./myProjects";
 
-const myprojects = [
-  {
-    projectTitle: "react project",
-    description:"",
-    category: ["react", "bootstrap"],
-    imaPath: "./images/2.jpg",
-  },
-  { projectTitle: "angular project",description:"", category: ["angular"], imaPath: "./images/1.jpg" },
-  { projectTitle: "Sign Up Form",description:"", category: ["angular"], imaPath: "./images/1.jpg" },
-  { projectTitle: "node project", description:"", category: ["node"], imaPath: "./images/3.jpg"},
-  { projectTitle: "html css project", description:"", category: ["html", "css"], imaPath:"./images/4.jpg" },
-  { projectTitle: "SpringBoot", description:"", category: ["html", "css"], imaPath:"./images/4.jpg" },
-];
+
 
 function Main() {
   const [currentactive, setcurrentactive] = useState("all");
@@ -39,39 +28,57 @@ function Main() {
           All Projects
         </button>
         <button
-          onClick={() => handleClick("html")}
-          className={currentactive === "html" ? "active" : null}
+          onClick={() => handleClick("spring boot")}
+          className={currentactive === "spring boot" ? "active" : null}
         >
-          Html & Css
-        </button>
-        <button
-          onClick={() => handleClick("react")}
-          className={currentactive === "react" ? "active" : null}
-        >
-          React & Mui
+          Spring Boot
         </button>
         <button
           onClick={() => handleClick("angular")}
           className={currentactive === "angular" ? "active" : null}
         >
-          Angular & SpringBoot
+          Angular
         </button>
         <button
-          onClick={() => handleClick("node")}
-          className={currentactive === "node" ? "active" : null}
+          onClick={() => handleClick("react")}
+          className={currentactive === "react" ? "active" : null}
         >
-          Node Js & Express
+          React
+        </button>
+     
+        <button
+          onClick={() => handleClick("node.js")}
+          className={currentactive === "node.js" ? "active" : null}
+        >
+          Node.js & Express
+        </button>
+        <button
+          onClick={() => handleClick("mui")}
+          className={currentactive === "mui" ? "active" : null}
+        >
+          MUI
+        </button>
+        {/* <button
+          onClick={() => handleClick("full-stack react & express")}
+          className={currentactive === "full-stack react & express" ? "active" : null}
+        >
+          Full-Stack React & Express
+        </button> */}
+        <button
+          onClick={() => handleClick("Full-Stack Angular & Spring Boot Project")}
+          className={currentactive === "full-stack angular & spring boot Project" ? "active" : null}
+        >
+          Full-Stack Angular & Spring Boot
         </button>
       </section>
       <section className="right-section flex">
         {projects.map((item) => (
           <article key={item.imaPath} className="card">
-            <img width={266}  src={item.imaPath} alt="LandingPage" />
+            <img width={266} height={170} src={item.imaPath} alt="LandingPage" />
             <div style={{ width: "266px" }} className="box">
               <h1 className="title">{item.projectTitle}</h1>
               <p className="sub-title">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                mollitia ullam reiciendis hic.
+               {item.description}
               </p>
               <div className="flex icons">
                 <div style={{ gap: "11px" }} className="flex">
