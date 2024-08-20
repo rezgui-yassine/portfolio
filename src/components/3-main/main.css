@@ -1,66 +1,60 @@
-/* ========================
+/* =============
  table of contents
-===========================
-1. Left Section ==> Buttons
-2. Right Section ==> Card
-3- Responsive Design (media query)*/
+===============
+ 
+1. Left Section
+2. Right Section
+
+*/
 
 main.flex {
   gap: 2.64rem;
   align-items: start;
 }
 
-/* ===============================
-   1. Left Section ==> Buttons
-================================== */
+/* ===========================
+   1. Left Section ==> buttons
+=============================== */
 main section.left-section.flex {
   flex-direction: column;
   gap: 10px;
 }
-
 main section.left-section.flex button {
   background-color: rgba(36, 37, 46, 1);
   width: 11rem;
-  padding: 0.75rem 0;
+  padding: 0.75rem 0rem;
   text-align: center;
   font-size: 1.05rem;
   text-transform: capitalize;
   opacity: 0.5;
-  border-radius: 5px;
   transition: 0.3s;
 }
-
-main section.left-section.flex button:hover {
-  opacity: 1;
-}
-
 main section.left-section.flex button.active {
   opacity: 1;
   font-weight: bold;
   letter-spacing: 0.6px;
-  padding: 0.8rem 0;
+  padding: 0.8rem 0rem;
   border: 1px solid var(--blue);
+  border-radius: 5px;
+  transition: 0.3s;
 }
 
 .light main section.left-section.flex button.active {
   border: 1px solid #000;
+
 }
 
-/* ===============================
-   2. Right Section ==> Card
-================================== */
-
-main section.right-section.flex {
-  flex-grow: 1;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  column-gap: 16px;
-  row-gap: 2rem;
+main section.left-section.flex button:hover {
+  cursor: pointer;
+  opacity: 1;
 }
+
+/* ===========================
+   1. Right Section ==> Cards
+==============================*/
 
 .card {
-  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.16), 1px 1px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15),1px 1px 1px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(93, 188, 252, 0.3);
   border-radius: 5px;
   transition: 0.3s;
@@ -70,11 +64,9 @@ main section.right-section.flex {
   );
 }
 
-.light .card,
-.light .card:hover {
+.light .card  ,.light .card:hover  {
   border: none;
 }
-
 .card:hover {
   border: 1px solid var(--blue);
   /* background-color: rgba(246, 246, 246); */
@@ -85,6 +77,14 @@ main section.right-section.flex {
 
 .card img {
   border-radius: 5px;
+}
+
+main section.right-section.flex {
+  flex-grow: 1;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+  column-gap: 14px;
 }
 
 .card .box {
@@ -102,7 +102,6 @@ main section.right-section.flex {
   margin-top: 0.7rem;
   margin-bottom: 1.1rem;
 }
-
 .card .box .icons {
   justify-content: space-between;
 }
@@ -112,23 +111,23 @@ main section.right-section.flex {
   font-size: 1.2rem;
   color: var(--subtitle);
 }
-
 .card .icon-github:hover,
 .card .icon-link:hover {
-  font-size: 1.25rem;
+  font-size: 1.26rem;
   color: var(--icon-hover);
   cursor: pointer;
 }
-
 .card a.link {
   font-size: 0.9rem;
   color: var(--blue);
+  display: flex;
+  align-items: center;
   margin-right: 12px;
 }
-
-/* =====================================
-  3- Responsive Design (media query)
-======================================== */
+.card .icon-arrow-right {
+  margin-left: auto; /* Push the icon to the right end */
+  font-size: 1rem; /* Adjust icon size if needed */
+}
 
 @media (max-width: 600px) {
   main.flex {
@@ -136,7 +135,6 @@ main section.right-section.flex {
     gap: 2.64rem;
     align-items: center;
   }
-
   main section.left-section.flex {
     flex-direction: row;
     flex-wrap: wrap;
@@ -146,7 +144,8 @@ main section.right-section.flex {
 
   main section.left-section.flex button {
     width: 7rem;
-    padding: 0.8rem 0;
+    padding: 0.8rem 0rem;
+
     font-size: 0.9rem;
   }
 }
