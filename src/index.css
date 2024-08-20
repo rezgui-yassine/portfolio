@@ -3,10 +3,10 @@
 html {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.1px;
-}
-html {
+  scroll-behavior: smooth;
   box-sizing: border-box;
 }
+
 
 *,
 *:before,
@@ -35,7 +35,7 @@ html {
 }
 
 .light {
-  --primary: #fff;
+  --primary: rgba(250, 250, 250);
 }
 
 body {
@@ -136,6 +136,8 @@ button:active {
   right: 3%;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 1.25rem;
+
  
 }
 .scrole2top:hover{
@@ -154,5 +156,6 @@ button:active {
     width: 2.2rem;
     height: 2.2rem;
     opacity: 0.6;
+    font-size: 1rem;
   }
 }
