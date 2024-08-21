@@ -91,6 +91,11 @@ section.contact-us .submit:hover {
 }
 
 
+
+@media (max-width: 1250px) {
+  section.contact-us .contact-animation{display: none;}
+}
+
 @media (max-width: 600px) {
   section.contact-us .animation {
     display: none;

@@ -1,5 +1,8 @@
 import React from "react";
 import "./hero.css";
+import Lottie from "lottie-react";
+import devoloperAnimation from "../../../public/animation/Animation - 1724273399998.json";
+
 function Hero() {
   return (
     <section className="hero flex">
@@ -27,7 +30,14 @@ function Hero() {
           <div className="icon icon-linkedin" />
         </div>
       </div>
-      <div className="right-section animation border">animation</div>
+      <div className="right-section animation ">
+
+      <Lottie
+                // loop={true}
+                style={{ height:350 ,width:350 }}
+                animationData={devoloperAnimation}
+              />
+      </div>
     </section>
   );
 }
